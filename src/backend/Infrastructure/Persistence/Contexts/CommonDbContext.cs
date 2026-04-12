@@ -19,7 +19,7 @@ namespace MyLeague.Infrastructure.Persistence.Contexts
         /// <param name="options">The options to be used by the DbContext.</param>
         public CommonDbContext(DbContextOptions<CommonDbContext> options) : base(options){}
 
-        /// <summary>
+        /// <summary> 
         /// Gets or sets the Persons DbSet.
         /// </summary>
         public DbSet<Person> Persons { get; set; }
@@ -54,6 +54,12 @@ namespace MyLeague.Infrastructure.Persistence.Contexts
         /// </summary>
         public DbSet<TimerState> TimerStates { get; set; }
 
+        /// <summary>
+        /// Gets or sets the SiteSettings
+        /// </summary>
+        public DbSet<SiteSetting> SiteSettings { get; set; }
+        
+   
         /// <summary>
         /// Gets or sets the PageContents DbSet.
         /// </summary>
@@ -111,8 +117,6 @@ namespace MyLeague.Infrastructure.Persistence.Contexts
             modelBuilder.ApplyConfiguration(new DivisionConfiguration());
             modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
             modelBuilder.ApplyConfiguration(new TimerStateConfiguration());
-
-            modelBuilder.ApplyConfiguration(new PageContentConfiguration());
         }
     }
 } 
