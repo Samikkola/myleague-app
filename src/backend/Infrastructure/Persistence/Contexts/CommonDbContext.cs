@@ -117,6 +117,8 @@ namespace MyLeague.Infrastructure.Persistence.Contexts
             modelBuilder.ApplyConfiguration(new DivisionConfiguration());
             modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
             modelBuilder.ApplyConfiguration(new TimerStateConfiguration());
+            modelBuilder.ApplyConfiguration(new SiteSettingConfiguration());
+            modelBuilder.ApplyConfiguration(new PageContentConfiguration());
         }
     }
 } 
